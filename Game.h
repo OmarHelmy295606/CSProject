@@ -1,7 +1,7 @@
 #pragma once
 
-#include "player.h"
-#include "hint.h"
+#include "Player.h"
+#include "Hint.h"
 #include "GameStateManager.h"
 #include <QList>
 #include <QString>
