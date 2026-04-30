@@ -7,7 +7,7 @@
 #include <QLinearGradient>
 #include <QRandomGenerator>
 #include <QFont>
-#include "game.h"
+#include "Game.h"
 
 class GameWidget : public QWidget {
 	Q_OBJECT

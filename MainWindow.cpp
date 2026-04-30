@@ -32,8 +32,9 @@ MainWindow::MainWindow(const QString &username, QWidget *parent)
 }
 
 void MainWindow::onStartGame(){
-	welcomeLabel->setText("Game starting soon...");
-	startButton->setEnabled(false);
+	gameWidget = new GameWidget(playerName, 2400, 1600, this);
+	setCentralWidget(gameWidget);
+	gameWidget->setFocus();
 }
 
 void MainWindow::onExitGame(){

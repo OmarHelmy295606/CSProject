@@ -17,7 +17,7 @@ public:
     int getSize() const { return size; }
 
     virtual void update() = 0;
-    virtual void draw(QPainter &painter) = 0;
+    virtual void draw(QPainter &painter, QPoint cameraOffset) = 0;
 
 protected:
     QPoint position;

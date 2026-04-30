@@ -182,6 +182,30 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/omarhelmy/CSProject/Game.h",
+			"MU",
+			"EWIEGA46WW/moc_Game.cpp",
+			null
+		],
+		[
+			"/home/omarhelmy/CSProject/GameStateManager.h",
+			"MU",
+			"EWIEGA46WW/moc_GameStateManager.cpp",
+			null
+		],
+		[
+			"/home/omarhelmy/CSProject/GameWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_GameWidget.cpp",
+			null
+		],
+		[
+			"/home/omarhelmy/CSProject/Hint.h",
+			"MU",
+			"EWIEGA46WW/moc_Hint.cpp",
+			null
+		],
+		[
 			"/home/omarhelmy/CSProject/LoginWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_LoginWindow.cpp",
@@ -191,6 +215,12 @@
 			"/home/omarhelmy/CSProject/MainWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_MainWindow.cpp",
+			null
+		],
+		[
+			"/home/omarhelmy/CSProject/Player.h",
+			"MU",
+			"EWIEGA46WW/moc_Player.cpp",
 			null
 		]
 	],
@@ -252,8 +282,13 @@
 	"SETTINGS_FILE" : "/home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/omarhelmy/CSProject/Game.cpp", "MU", null ],
+		[ "/home/omarhelmy/CSProject/GameStateManager.cpp", "MU", null ],
+		[ "/home/omarhelmy/CSProject/GameWidget.cpp", "MU", null ],
+		[ "/home/omarhelmy/CSProject/Hint.cpp", "MU", null ],
 		[ "/home/omarhelmy/CSProject/LoginWindow.cpp", "MU", null ],
 		[ "/home/omarhelmy/CSProject/MainWindow.cpp", "MU", null ],
+		[ "/home/omarhelmy/CSProject/Player.cpp", "MU", null ],
 		[ "/home/omarhelmy/CSProject/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

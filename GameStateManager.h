@@ -1,12 +1,12 @@
 #pragma once
 
 enum class GameState{
-	Menu;
-	Playing;
-	Paused;
-	Win;
-	Lose;
-	Level_Complete;
+	Menu,
+	Playing,
+	Paused,
+	Win,
+	Lose,
+	Level_Complete
 };
 
 class GameStateManager{

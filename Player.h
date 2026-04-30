@@ -16,6 +16,7 @@ public:
     void setName(const QString &name);
 
     float getOxygenLevel() const;
+    void resetOxygen();
     void depleteOxygen(float amount);
 
     void setMapBounds(int w, int h);
@@ -23,7 +24,7 @@ public:
     void setMoving(Qt::Key key, bool moving);
 
     void update() override;
-    void draw(QPainter &painter) override;
+    void draw(QPainter &painter, QPoint cameraOffset) override;
 
 private:
     QString name;

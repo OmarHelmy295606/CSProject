@@ -35,6 +35,11 @@ void Player::depleteOxygen(float amount) {
         oxygenLevel = 0.0f;
 }
 
+void Player::resetOxygen(){
+	oxygenLevel = 100.0f;
+}
+
+
 void Player::setMapBounds(int w, int h) {
     mapWidth = w;
     mapHeight = h;
@@ -64,15 +69,19 @@ void Player::update() {
 }
 
 
-void Player::draw(QPainter &painter) {
+void Player::draw(QPainter &painter, QPoint cameraOffset) {
+    int screenX = position.x() - cameraOffset.x();
+    int screenY = position.y() - cameraOffset.y();
+    QPoint screenPos(screenX, screenY);
+
     painter.save();
 
     painter.setBrush(QBrush(Qt::cyan));
     painter.setPen(Qt::darkCyan);
-    painter.drawEllipse(position, size, size);
+    painter.drawEllipse(screenPos, size, size);
 
     painter.setPen(Qt::white);
-    painter.drawText(position.x() - size, position.y() - size - 4, name);
+    painter.drawText(screenX - size, screenY - size - 4, name);
 
     painter.restore();
 }

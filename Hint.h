@@ -21,7 +21,7 @@ public:
     void collect();    // called when the player reaches this hint
 
     void update() override;   // pulse animation, only when active
-    void draw(QPainter &painter) override; // only draws when active
+    void draw(QPainter &painter, QPoint cameraOffset) override; // only draws when active
 
 private:
     int     sequenceIndex;

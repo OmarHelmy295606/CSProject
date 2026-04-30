@@ -1,7 +1,7 @@
 #include "GameWidget.h"
 #include <cmath>
 
-GameWidget::GameWidget(cosnt QString& playerName, int mapWidth, int mapHeight, QWidget* parent = nullptr) :
+GameWidget::GameWidget(const QString& playerName, int mapWidth, int mapHeight, QWidget* parent) :
 	QWidget(parent),
 	mapWidth(mapWidth),
 	mapHeight(mapHeight)
@@ -49,10 +49,10 @@ void GameWidget::keyPressEvent(QKeyEvent *event) {
 
 	if (event->key() == Qt::Key_Escape) {
 		GameState s = game->getStateManager()->getState();
-        	if (s == GameState::PLAYING)
-        		game->getStateManager()->setState(GameState::PAUSED);
-        	else if (s == GameState::PAUSED)
-         	   	game->getStateManager()->setState(GameState::PLAYING);
+        	if (s == GameState::Playing)
+        		game->getStateManager()->setState(GameState::Paused);
+        	else if (s == GameState::Paused)
+         	   	game->getStateManager()->setState(GameState::Playing);
         	return;
     	}
 
@@ -364,7 +364,7 @@ void GameWidget::drawEndOverlay(QPainter &p) {
 
 	p.fillRect(rect(), QColor(0, 0, 0, 170));
 
-	if (state == GameState::PAUSED) {
+	if (state == GameState::Paused) {
 		p.setPen(QColor(140, 200, 255));
 		p.setFont(QFont("Courier New", 32, QFont::Bold));
 		p.drawText(rect(), Qt::AlignCenter, "— PAUSED —");
@@ -374,7 +374,7 @@ void GameWidget::drawEndOverlay(QPainter &p) {
 		return;
 	}
 
-	if (state == GameState::WIN) {
+	if (state == GameState::Win) {
 		p.setPen(QColor(255, 210, 60));
 		p.setFont(QFont("Courier New", 34, QFont::Bold));
 		p.drawText(QRect(0, height() / 2 - 80, width(), 60), Qt::AlignCenter, "TREASURE FOUND");
@@ -386,7 +386,7 @@ void GameWidget::drawEndOverlay(QPainter &p) {
 				.arg(static_cast<int>(game->getPlayer()->getOxygenLevel())));
 	}
 
-	if (state == GameState::LOSE) {
+	if (state == GameState::Lose) {
 		p.setPen(QColor(220, 50, 50));
 		p.setFont(QFont("Courier New", 34, QFont::Bold));
 		p.drawText(QRect(0, height() / 2 - 80, width(), 60), Qt::AlignCenter, "OXYGEN DEPLETED");

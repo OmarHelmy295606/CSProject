@@ -3,11 +3,12 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QString>
+#include "GameWidget.h"
 
 class MainWindow : public QMainWindow{
 	Q_OBJECT
 public:
-	explicit MainWindow(const QString& usernmae, QWidget *parent = nullptr);
+	explicit MainWindow(const QString& username, QWidget *parent = nullptr);
 private slots:
 	void onStartGame();
 	void onExitGame();
@@ -17,6 +18,6 @@ private:
 	QLabel *welcomeLabel;
 	QPushButton *startButton;
 	QPushButton *exitButton;
-
+	GameWidget* gameWidget;
 
 };

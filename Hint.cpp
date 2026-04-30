@@ -56,8 +56,11 @@ void Hint::update() {
         pulsePhase -= 2.0f * static_cast<float>(M_PI);
 }
 
-void Hint::draw(QPainter &painter) {
+void Hint::draw(QPainter &painter, QPoint cameraOffset) {
     if (!active) return;
+    int screenX = position.x() - cameraOffset.x();
+    int screenY = position.y() - cameraOffset.y();
+    QPoint screenPos(screenX, screenY);
 
     painter.save();
 
@@ -67,11 +70,11 @@ void Hint::draw(QPainter &painter) {
     QColor glow(255, 215, 0, 120);
     painter.setBrush(QBrush(glow));
     painter.setPen(Qt::NoPen);
-    painter.drawEllipse(position, r + 4, r + 4);
+    painter.drawEllipse(screenPos, r + 4, r + 4);
 
     painter.setBrush(QBrush(QColor(255, 215, 0)));
     painter.setPen(QPen(QColor(180, 140, 0), 2));
-    painter.drawEllipse(position, r, r);
+    painter.drawEllipse(screenPos, r, r);
 
     QFont font = painter.font();
     font.setBold(true);
@@ -79,7 +82,7 @@ void Hint::draw(QPainter &painter) {
     painter.setFont(font);
     painter.setPen(Qt::darkYellow);
     painter.drawText(
-        QRect(position.x() - r, position.y() - r, r * 2, r * 2),
+        QRect(screenX - r, screenY - r, r * 2, r * 2),
         Qt::AlignCenter,
         "?"
     );

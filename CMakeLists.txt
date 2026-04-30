@@ -13,7 +13,6 @@ add_executable(ScavengerHunt
 	main.cpp
 	LoginWindow.cpp
 	MainWindow.cpp
-	GameObject.cpp
 	Player.cpp
 	Hint.cpp
 	Game.cpp

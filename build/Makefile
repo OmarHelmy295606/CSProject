@@ -155,6 +155,102 @@ ScavengerHunt_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt_autogen.dir/build.make CMakeFiles/ScavengerHunt_autogen.dir/build
 .PHONY : ScavengerHunt_autogen/fast
 
+Game.o: Game.cpp.o
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+GameStateManager.o: GameStateManager.cpp.o
+.PHONY : GameStateManager.o
+
+# target to build an object file
+GameStateManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o
+.PHONY : GameStateManager.cpp.o
+
+GameStateManager.i: GameStateManager.cpp.i
+.PHONY : GameStateManager.i
+
+# target to preprocess a source file
+GameStateManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.i
+.PHONY : GameStateManager.cpp.i
+
+GameStateManager.s: GameStateManager.cpp.s
+.PHONY : GameStateManager.s
+
+# target to generate assembly for a file
+GameStateManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.s
+.PHONY : GameStateManager.cpp.s
+
+GameWidget.o: GameWidget.cpp.o
+.PHONY : GameWidget.o
+
+# target to build an object file
+GameWidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o
+.PHONY : GameWidget.cpp.o
+
+GameWidget.i: GameWidget.cpp.i
+.PHONY : GameWidget.i
+
+# target to preprocess a source file
+GameWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.i
+.PHONY : GameWidget.cpp.i
+
+GameWidget.s: GameWidget.cpp.s
+.PHONY : GameWidget.s
+
+# target to generate assembly for a file
+GameWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.s
+.PHONY : GameWidget.cpp.s
+
+Hint.o: Hint.cpp.o
+.PHONY : Hint.o
+
+# target to build an object file
+Hint.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Hint.cpp.o
+.PHONY : Hint.cpp.o
+
+Hint.i: Hint.cpp.i
+.PHONY : Hint.i
+
+# target to preprocess a source file
+Hint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Hint.cpp.i
+.PHONY : Hint.cpp.i
+
+Hint.s: Hint.cpp.s
+.PHONY : Hint.s
+
+# target to generate assembly for a file
+Hint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Hint.cpp.s
+.PHONY : Hint.cpp.s
+
 LoginWindow.o: LoginWindow.cpp.o
 .PHONY : LoginWindow.o
 
@@ -202,6 +298,30 @@ MainWindow.s: MainWindow.cpp.s
 MainWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.s
 .PHONY : MainWindow.cpp.s
+
+Player.o: Player.cpp.o
+.PHONY : Player.o
+
+# target to build an object file
+Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Player.cpp.o
+.PHONY : Player.cpp.o
+
+Player.i: Player.cpp.i
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Player.cpp.s
+.PHONY : Player.cpp.s
 
 ScavengerHunt_autogen/mocs_compilation.o: ScavengerHunt_autogen/mocs_compilation.cpp.o
 .PHONY : ScavengerHunt_autogen/mocs_compilation.o
@@ -262,12 +382,27 @@ help:
 	@echo "... ScavengerHunt_autogen"
 	@echo "... ScavengerHunt_autogen_timestamp_deps"
 	@echo "... ScavengerHunt"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... GameStateManager.o"
+	@echo "... GameStateManager.i"
+	@echo "... GameStateManager.s"
+	@echo "... GameWidget.o"
+	@echo "... GameWidget.i"
+	@echo "... GameWidget.s"
+	@echo "... Hint.o"
+	@echo "... Hint.i"
+	@echo "... Hint.s"
 	@echo "... LoginWindow.o"
 	@echo "... LoginWindow.i"
 	@echo "... LoginWindow.s"
 	@echo "... MainWindow.o"
 	@echo "... MainWindow.i"
 	@echo "... MainWindow.s"
+	@echo "... Player.o"
+	@echo "... Player.i"
+	@echo "... Player.s"
 	@echo "... ScavengerHunt_autogen/mocs_compilation.o"
 	@echo "... ScavengerHunt_autogen/mocs_compilation.i"
 	@echo "... ScavengerHunt_autogen/mocs_compilation.s"

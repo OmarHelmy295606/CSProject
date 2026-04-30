@@ -6,9 +6,9 @@
 Game::Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight) :
 	mapWidth(mapWidth),
 	mapHeight(mapHeight),
-	screenWidth(mapWidth),
+	screenWidth(screenWidth),
 	screenHeight(screenHeight),
-	currentHintItem(0),
+	currentHintIndex(0),
 	cameraOffset(0, 0),
 	activeMessage(""),
 	messageActive(false),
@@ -16,7 +16,7 @@ Game::Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight) :
 	collectionRadius(40)
 {
 	stateManager = new GameStateManager();
-	player = new Player(QPoint(mapWidth / 2, mapHeight / 2));
+	player = new Player("PlaceHolder Player", QPoint(mapWidth / 2, mapHeight / 2));
 	player->setMapBounds(mapWidth, mapHeight);
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
@@ -25,11 +25,11 @@ Game::~Game(){
 	delete player;
 	delete stateManager;
 	qDeleteAll(hints);
-	hints.clear;
+	hints.clear();
 }
 
 
-void Game::start(){
+void Game::start(const QString& playerName){
 	player->setName(playerName);
 	reset();
 }
@@ -37,6 +37,7 @@ void Game::start(){
 void Game::reset(){
 	player->setPosition(QPoint(mapWidth / 2, mapHeight / 2));
 	player->resetOxygen();
+
 	qDeleteAll(hints);
 	hints.clear();
 	spawnHints();
@@ -47,7 +48,7 @@ void Game::reset(){
 
 	cameraOffset = QPoint(0, 0);
 	updateCamera();
-	setManager->setState(GameState::Playing);
+	stateManager->setState(GameState::Playing);
 }
 
 
@@ -57,7 +58,7 @@ void Game::spawnHints(){
         	QString message;
     	};
 
-	QList<HintData> hintDate = {
+	QList<HintData> hintData = {
 		{ QPoint(300,  400),  "The sea holds secrets... follow the broken anchor." },
         	{ QPoint(800,  700),  "Near the sunken mast, something gleams..." },
         	{ QPoint(1400, 500),  "The old hull hides a clue beneath its shadow." },
@@ -65,7 +66,7 @@ void Game::spawnHints(){
 	};
 
 	for(int i =0; i< hintData.size(); i++){
-		Hint h* new Hint(hintData[i].pos, i, hintData[i].message;
+		Hint* h = new Hint(i, hintData[i].message, hintData[i].pos);
 		if(i==0)
 			h->activate();
 		hints.append(h);
@@ -83,9 +84,9 @@ void Game::update(){
 	checkCollisions();
 
 	if(checkWinCondition())
-		stateManager->setState(GameState::WIN);
+		stateManager->setState(GameState::Win);
 	else if(checkLoseCondition())
-		stateManager->setState(GameState::LOSE);
+		stateManager->setState(GameState::Lose);
 }
 
 void Game::updateCamera(){
@@ -105,9 +106,9 @@ QPoint Game::getCameraOffset() const {
 void Game::checkCollisions(){
 	if (currentHintIndex >= hints.size()) return;
 
-	Hint* active = hints[currentHintItem];
-	QPoint playerpos = player->getPosition();
-	QPoint hintpos = active->getPosition();
+	Hint* active = hints[currentHintIndex];
+	QPoint playerPos = player->getPosition();
+	QPoint hintPos = active->getPosition();
 
 	int dx = playerPos.x() - hintPos.x();
 	int dy = playerPos.y() - hintPos.y();
@@ -120,8 +121,8 @@ void Game::checkCollisions(){
 
 
 void Game::onHintCollected(int index){
-	hints[index]->collect;
-	activeMessage = hint[index]->getMessage();
+	hints[index]->collect();
+	activeMessage = hints[index]->getMessage();
 	messageActive = true;
 	currentHintIndex++;
 
@@ -130,7 +131,7 @@ void Game::onHintCollected(int index){
 }
 
 QString Game::getCurrentMessage() const{
-	return activeMessgae;
+	return activeMessage;
 }
 
 bool Game::hasActiveMessage() const{
@@ -143,7 +144,7 @@ void Game::dismissMessage(){
 }
 
 bool Game::checkWinCondition(){
-	for(Hint* hint :hints)
+	for(Hint* h :hints)
 		if(!h->isCollected()) return false;
 	return true;
 }
@@ -162,7 +163,7 @@ void Game::setPlayerMoving(Qt::Key key, bool pressed) {
 }
 
 Player* Game::getPlayer() const {return player;}
-QList<Hints*> Game::getHints() const {return hints;}
-GameStateManager Game::getStateManager() const {return stateManager;}
+QList<Hint*> Game::getHints() const {return hints;}
+GameStateManager* Game::getStateManager() const {return stateManager;}
 int Game::getCurrentHintIndex() const {return currentHintIndex;}
 
