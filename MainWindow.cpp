@@ -1,42 +1,156 @@
 #include "MainWindow.h"
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QLabel>
+#include <QFrame>
+
 MainWindow::MainWindow(const QString &username, QWidget *parent)
-	: QMainWindow(parent), playerName(username)
+        : QMainWindow(parent), playerName(username)
 {
-	setWindowTitle("Scavenger Hunt");
-	setFixedSize(800, 600);
-	QWidget *central = new QWidget(this);
-	setCentralWidget(central);
+        setWindowTitle("Scavenger Hunt");
+        setFixedSize(800, 600);
 
-	welcomeLabel = new QLabel("Welcome, " + playerName + "!\nReady to hunt?");
-	startButton  = new QPushButton("▶  Start Game");
-	exitButton   = new QPushButton("✕  Exit");
+        QWidget *central = new QWidget(this);
+        setCentralWidget(central);
 
-	welcomeLabel->setAlignment(Qt::AlignCenter);
-	welcomeLabel->setStyleSheet("font-size: 24px; font-weight: bold;");
-	startButton->setStyleSheet("font-size: 16px; padding: 10px 40px;");
-	exitButton->setStyleSheet("font-size: 14px; padding: 8px 40px; color: gray;");
+        central->setStyleSheet(
+        "QWidget {"
+        "   background-color: #0B1220;"
+        "   color: white;"
+        "}"
+        );
 
-	QVBoxLayout *layout = new QVBoxLayout(central);
-	layout->setAlignment(Qt::AlignCenter);
-	layout->setSpacing(20);
-	layout->addWidget(welcomeLabel);
-	layout->addWidget(startButton);
-	layout->addWidget(exitButton);
+        QVBoxLayout *mainLayout = new QVBoxLayout(central);
+        mainLayout->setContentsMargins(60, 40, 60, 40);
+        mainLayout->setSpacing(20);
+        mainLayout->setAlignment(Qt::AlignCenter);
 
-	connect(startButton, &QPushButton::clicked, this, &MainWindow::onStartGame);
-	connect(exitButton,  &QPushButton::clicked, this, &MainWindow::onExitGame);
+        QFrame *card = new QFrame();
+        card->setFixedWidth(500);
 
+        card->setStyleSheet(
+        "QFrame {"
+        "   background-color: #111827;"
+        "   border-radius: 24px;"
+        "   border: 1px solid #1F2937;"
+        "}"
+        );
+
+        QVBoxLayout *cardLayout = new QVBoxLayout(card);
+        cardLayout->setContentsMargins(40, 40, 40, 40);
+        cardLayout->setSpacing(24);
+
+        QLabel *titleLabel = new QLabel(" Scavenger Hunt ");
+        titleLabel->setAlignment(Qt::AlignCenter);
+
+        titleLabel->setStyleSheet(
+        "font-size: 32px;"
+        "font-weight: 700;"
+        "color: white;"
+        );
+
+        welcomeLabel = new QLabel(
+                "Welcome back, <b>" + playerName + "</b><br>"
+                "<span style='color:#9CA3AF;'>Ready to explore the depths?</span>"
+        );
+
+        welcomeLabel->setAlignment(Qt::AlignCenter);
+
+        welcomeLabel->setStyleSheet(
+        "font-size: 18px;"
+        "line-height: 1.6;"
+        "color: #E5E7EB;"
+        );
+
+        easyButton   = new QPushButton("Easy");
+        mediumButton = new QPushButton("Medium");
+        hardButton   = new QPushButton("Hard");
+        exitButton  = new QPushButton("Exit");
+
+        QString levelStyle =
+                "QPushButton {"
+                "   background-color: #2563EB;"
+                "   color: white;"
+                "   border: none;"
+                "   border-radius: 14px;"
+                "   font-size: 15px;"
+                "   font-weight: 600;"
+                "   padding: 14px;"
+                "}"
+                "QPushButton:hover {"
+                "   background-color: #3B82F6;"
+                "}"
+                "QPushButton:pressed {"
+                "   background-color: #1D4ED8;"
+                "}";
+
+        easyButton->setStyleSheet(levelStyle);
+        mediumButton->setStyleSheet(levelStyle);
+        hardButton->setStyleSheet(levelStyle);
+
+        easyButton->setFixedHeight(50);
+        mediumButton->setFixedHeight(50);
+        hardButton->setFixedHeight(50);
+
+        easyButton->setCursor(Qt::PointingHandCursor);
+        mediumButton->setCursor(Qt::PointingHandCursor);
+        hardButton->setCursor(Qt::PointingHandCursor);
+exitButton->setStyleSheet(
+        "QPushButton {"
+        "   background-color: transparent;"
+        "   color: #9CA3AF;"
+        "   border: 1px solid #374151;"
+        "   border-radius: 14px;"
+        "   font-size: 15px;"
+        "   padding: 10px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #1F2937;"
+        "   color: white;"
+        "}"
+        );
+
+        cardLayout->addWidget(titleLabel);
+        cardLayout->addWidget(welcomeLabel);
+        cardLayout->addSpacing(10);
+        cardLayout->addWidget(easyButton);
+        cardLayout->addWidget(mediumButton);
+        cardLayout->addWidget(hardButton);
+        cardLayout->addWidget(exitButton);
+
+        mainLayout->addWidget(card);
+
+        connect(easyButton, &QPushButton::clicked,
+                this, &MainWindow::startEasy);
+
+        connect(mediumButton, &QPushButton::clicked,
+                this, &MainWindow::startMedium);
+
+        connect(hardButton, &QPushButton::clicked,
+                this, &MainWindow::startHard);
+
+        connect(exitButton, &QPushButton::clicked,
+                this, &MainWindow::onExitGame);
 }
 
-void MainWindow::onStartGame(){
-	gameWidget = new GameWidget(playerName, 1, this);
-	setCentralWidget(gameWidget);
-	gameWidget->setFocus();
+void MainWindow::startEasy() {
+        gameWidget = new GameWidget(playerName, 1, this);
+        setCentralWidget(gameWidget);
+        gameWidget->setFocus();
 }
 
-void MainWindow::onExitGame(){
-	this->close();
+void MainWindow::startMedium() {
+        gameWidget = new GameWidget(playerName, 2, this);
+        setCentralWidget(gameWidget);
+        gameWidget->setFocus();
+}
+
+void MainWindow::startHard() {
+        gameWidget = new GameWidget(playerName, 3, this);
+        setCentralWidget(gameWidget);
+        gameWidget->setFocus();
+}
+void MainWindow::onExitGame() {
+        close();
 }

@@ -439,5 +439,5 @@ void GameWidget::drawEndOverlay(QPainter &p) {
 
 	p.setPen(QColor(140, 180, 200, 180));
 	p.setFont(QFont("Courier New", 11));
-	p.drawText(QRect(0, height() / 2 + 80, width(), 30), Qt::AlignCenter, "Press R to dive again   |   ESC to surface");
+	p.drawText(QRect(0, height() / 2 + 80, width(), 30), Qt::AlignCenter, "Press R to dive again");
 }

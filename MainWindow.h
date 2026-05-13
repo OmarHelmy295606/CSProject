@@ -6,18 +6,22 @@
 #include "GameWidget.h"
 
 class MainWindow : public QMainWindow{
-	Q_OBJECT
+        Q_OBJECT
 public:
-	explicit MainWindow(const QString& username, QWidget *parent = nullptr);
+        explicit MainWindow(const QString& username, QWidget *parent = nullptr);
 private slots:
-	void onStartGame();
-	void onExitGame();
+        void startEasy();
+        void startMedium();
+        void startHard();
+        void onExitGame();
 
 private:
-	QString playerName;
-	QLabel *welcomeLabel;
-	QPushButton *startButton;
-	QPushButton *exitButton;
-	GameWidget* gameWidget;
+        QString playerName;
+        QLabel *welcomeLabel;
+        QPushButton *easyButton;
+        QPushButton *mediumButton;
+        QPushButton *hardButton;
+        QPushButton *exitButton;
+        GameWidget* gameWidget;
 
 };
