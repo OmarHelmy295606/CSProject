@@ -27,6 +27,7 @@ private:
 	void drawMapObjects(QPainter &p);
 	void drawHints(QPainter &p);
 	void drawPlayer(QPainter &p);
+	void drawSharks(QPainter &p);
 	void drawDarkness(QPainter &p);
 	void drawHUD(QPainter &p);
 	void drawMiniMap(QPainter &p);

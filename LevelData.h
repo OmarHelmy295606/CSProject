@@ -148,7 +148,7 @@ inline LevelConfig getLevel(int number) {
 
     {
         LevelConfig l;
-        l.levelNumber    = 2;
+        l.levelNumber    = 3;
         l.levelName      = "The Deep Trench";
         l.introText      = "No expedition has returned from this depth.\n"
                            "The last team left one transmission:\n"

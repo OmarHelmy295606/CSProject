@@ -14,14 +14,16 @@ Game::Game(int screenWidth, int screenHeight) :
 	collectionRadius(40)
 {
 	stateManager = new GameStateManager();
-	player = nullptr;
 
+	player = nullptr;
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
 Game::~Game(){
 	delete player;
 	delete stateManager;
+	qDeleteAll(sharks);
+	sharks.clear();
 	qDeleteAll(hints);
 	hints.clear();
 }
@@ -43,6 +45,15 @@ void Game::loadLevel(int levelNumber){
 	qDeleteAll(hints);
 	hints.clear();
 	spawnHints();
+
+	qDeleteAll(sharks);
+	sharks.clear();
+	for(int i=0;i<activeConfig.numSharks;i++){
+		QPoint sharkPos(300 + (i * 500), 300 + (i * 400));
+		Shark* shark = new Shark(sharkPos);
+
+		sharks.append(shark);
+	}
 
 	currentHintIndex = 0;
 	activeMessage    = "";
@@ -81,6 +92,10 @@ void Game::update(){
 	if(!stateManager->isPlaying()) return;
 	if(!player) return;
 	player->update();
+	for(Shark* shark : sharks){
+		shark->setTarget(player->getPosition());
+		shark->update();
+	}
 	updateCamera();
 	for(Hint* h : hints)
 		h->update();
@@ -159,7 +174,15 @@ bool Game::checkWinCondition(){
 }
 
 bool Game::checkLoseCondition(){
-	return player->getOxygenLevel() <= 0.0f;
+
+        if(player->getOxygenLevel() <= 0.0f)
+                return true;
+
+	for(Shark* shark : sharks){
+        	if(shark->collidesWith(player->getPosition(),player->getSize()))
+                	return true;
+	}
+        return false;
 }
 
 void Game::tickOxygen(){
@@ -172,6 +195,7 @@ void Game::setPlayerMoving(Qt::Key key, bool pressed) {
 }
 
 Player* Game::getPlayer() const {return player;}
+QList<Shark*> Game::getSharks() const {return sharks;}
 QList<Hint*> Game::getHints() const {return hints;}
 GameStateManager* Game::getStateManager() const {return stateManager;}
 int Game::getCurrentHintIndex() const {return currentHintIndex;}

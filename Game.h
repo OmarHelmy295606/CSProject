@@ -2,6 +2,7 @@
 
 #include "Player.h"
 #include "Hint.h"
+#include "Shark.h"
 #include "GameStateManager.h"
 #include <QList>
 #include <QString>
@@ -28,6 +29,7 @@ public:
     	void    dismissMessage();
 
     	Player           *getPlayer()       const;
+	QList<Shark*> getSharks() const;
     	QList<Hint *>     getHints()        const;
     	GameStateManager *getStateManager() const;
     	int           getCurrentHintIndex() const;
@@ -50,6 +52,7 @@ private:
 	void onHintCollected(int index);
 
 	Player           *player;
+	QList<Shark*> sharks;
     	QList<Hint *>     hints;
     	GameStateManager *stateManager;
 

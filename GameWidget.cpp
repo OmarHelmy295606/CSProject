@@ -82,6 +82,7 @@ void GameWidget::paintEvent(QPaintEvent *) {
     	drawMapObjects(p);
     	drawHints(p);
     	drawPlayer(p);
+	drawSharks(p);
     	drawDarkness(p);
     	drawHUD(p);
     	drawMiniMap(p);
@@ -240,6 +241,14 @@ void GameWidget::drawHints(QPainter &p) {
 void GameWidget::drawPlayer(QPainter &p) {
 	QPoint cam = game->getCameraOffset();
 	game->getPlayer()->draw(p, cam);
+}
+
+void GameWidget::drawSharks(QPainter &p) {
+
+	QPoint cam = game->getCameraOffset();
+	for(Shark* shark : game->getSharks()){
+		shark->draw(p, cam);
+	}
 }
 
 void GameWidget::drawDarkness(QPainter &p) {

@@ -34,7 +34,7 @@ struct LevelConfig {
 
 	int mapWidth;
 	int mapHeight;
-	int oxygenDrainRate;
+	float oxygenDrainRate;
 	int torchRadius;
 	int numSharks;
 

@@ -18,6 +18,7 @@ add_executable(ScavengerHunt
 	Game.cpp
 	GameWidget.cpp
 	GameStateManager.cpp
+	Shark.cpp
 )
 
 target_link_libraries(ScavengerHunt PRIVATE Qt6::Widgets)
