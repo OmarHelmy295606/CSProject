@@ -10,13 +10,17 @@ class MainWindow : public QMainWindow{
 public:
 	explicit MainWindow(const QString& username, QWidget *parent = nullptr);
 private slots:
-	void onStartGame();
+	void startEasy();
+	void startMedium();
+	void startHard();
 	void onExitGame();
 
 private:
 	QString playerName;
 	QLabel *welcomeLabel;
-	QPushButton *startButton;
+	QPushButton *easyButton;
+	QPushButton *mediumButton;
+	QPushButton *hardButton;
 	QPushButton *exitButton;
 	GameWidget* gameWidget;
 

@@ -18,7 +18,7 @@ Game::Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight) :
 	stateManager = new GameStateManager();
 	player = new Player("PlaceHolder Player", QPoint(mapWidth / 2, mapHeight / 2));
 	player->setMapBounds(mapWidth, mapHeight);
-	shark = new Shark(QPoint(std::rand()%600,std::rand()%800));
+	shark = new Shark(QPoint(std::rand()%800,std::rand()%600));
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
@@ -39,6 +39,8 @@ void Game::start(const QString& playerName){
 void Game::reset(){
 	player->setPosition(QPoint(mapWidth / 2, mapHeight / 2));
 	player->resetOxygen();
+
+	shark->setPosition(QPoint(std::rand()%800, std::rand()%600));
 
 	qDeleteAll(hints);
 	hints.clear();
