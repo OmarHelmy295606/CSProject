@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ScavengerHunt.dir/Player.cpp.o.d"
   "CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/ScavengerHunt.dir/Shark.cpp.o"
+  "CMakeFiles/ScavengerHunt.dir/Shark.cpp.o.d"
   "CMakeFiles/ScavengerHunt.dir/main.cpp.o"
   "CMakeFiles/ScavengerHunt.dir/main.cpp.o.d"
   "ScavengerHunt"

@@ -1,5 +1,5 @@
-/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/moc_LoginWindow.cpp: /home/omarhelmy/CSProject/LoginWindow.h \
-  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
+/home/giroum/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/moc_LoginWindow.cpp: /home/giroum/CSProject/LoginWindow.h \
+  /home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

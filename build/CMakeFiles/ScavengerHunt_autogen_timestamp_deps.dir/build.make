@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omarhelmy/CSProject
+CMAKE_SOURCE_DIR = /home/giroum/CSProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omarhelmy/CSProject/build
+CMAKE_BINARY_DIR = /home/giroum/CSProject/build
 
 # Utility rule file for ScavengerHunt_autogen_timestamp_deps.
 
@@ -66,9 +66,9 @@ include CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/ScavengerHunt_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
-CMakeFiles/ScavengerHunt_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/ScavengerHunt_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
+CMakeFiles/ScavengerHunt_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/ScavengerHunt_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 
 ScavengerHunt_autogen_timestamp_deps: CMakeFiles/ScavengerHunt_autogen_timestamp_deps
 ScavengerHunt_autogen_timestamp_deps: CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/depend:
-	cd /home/omarhelmy/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omarhelmy/CSProject /home/omarhelmy/CSProject /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/giroum/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giroum/CSProject /home/giroum/CSProject /home/giroum/CSProject/build /home/giroum/CSProject/build /home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ScavengerHunt_autogen_timestamp_deps.dir/depend
 

@@ -18,12 +18,14 @@ Game::Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight) :
 	stateManager = new GameStateManager();
 	player = new Player("PlaceHolder Player", QPoint(mapWidth / 2, mapHeight / 2));
 	player->setMapBounds(mapWidth, mapHeight);
+	shark = new Shark(QPoint(std::rand()%600,std::rand()%800));
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
 Game::~Game(){
 	delete player;
 	delete stateManager;
+	delete shark;
 	qDeleteAll(hints);
 	hints.clear();
 }
@@ -78,6 +80,8 @@ void Game::update(){
 	if(!stateManager->isPlaying()) return;
 
 	player->update();
+	shark->setTarget(player->getPosition());
+	shark->update();
 	updateCamera();
 	for(Hint* h : hints)
 		h->update();
@@ -150,7 +154,14 @@ bool Game::checkWinCondition(){
 }
 
 bool Game::checkLoseCondition(){
-	return player->getOxygenLevel() <= 0.0f;
+
+        if(player->getOxygenLevel() <= 0.0f)
+                return true;
+
+        if(shark->collidesWith(player->getPosition(),player->getSize()))
+                return true;
+
+        return false;
 }
 
 void Game::tickOxygen(){
@@ -163,6 +174,7 @@ void Game::setPlayerMoving(Qt::Key key, bool pressed) {
 }
 
 Player* Game::getPlayer() const {return player;}
+Shark* Game::getShark() const {return shark;}
 QList<Hint*> Game::getHints() const {return hints;}
 GameStateManager* Game::getStateManager() const {return stateManager;}
 int Game::getCurrentHintIndex() const {return currentHintIndex;}

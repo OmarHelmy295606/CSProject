@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omarhelmy/CSProject
+CMAKE_SOURCE_DIR = /home/giroum/CSProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omarhelmy/CSProject/build
+CMAKE_BINARY_DIR = /home/giroum/CSProject/build
 
 # Utility rule file for ScavengerHunt_autogen.
 
@@ -71,9 +71,9 @@ CMakeFiles/ScavengerHunt_autogen: ScavengerHunt_autogen/timestamp
 ScavengerHunt_autogen/timestamp: /usr/lib/qt6/libexec/moc
 ScavengerHunt_autogen/timestamp: /usr/lib/qt6/libexec/uic
 ScavengerHunt_autogen/timestamp: CMakeFiles/ScavengerHunt_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ScavengerHunt"
-	/usr/bin/cmake -E cmake_autogen /home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ScavengerHunt"
+	/usr/bin/cmake -E cmake_autogen /home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E touch /home/giroum/CSProject/build/ScavengerHunt_autogen/timestamp
 
 ScavengerHunt_autogen: CMakeFiles/ScavengerHunt_autogen
 ScavengerHunt_autogen: ScavengerHunt_autogen/timestamp
@@ -89,6 +89,6 @@ CMakeFiles/ScavengerHunt_autogen.dir/clean:
 .PHONY : CMakeFiles/ScavengerHunt_autogen.dir/clean
 
 CMakeFiles/ScavengerHunt_autogen.dir/depend:
-	cd /home/omarhelmy/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omarhelmy/CSProject /home/omarhelmy/CSProject /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/giroum/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giroum/CSProject /home/giroum/CSProject /home/giroum/CSProject/build /home/giroum/CSProject/build /home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ScavengerHunt_autogen.dir/depend
 

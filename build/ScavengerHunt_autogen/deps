@@ -1,24 +1,26 @@
 ScavengerHunt_autogen/timestamp: \
-	/home/omarhelmy/CSProject/CMakeLists.txt \
-	/home/omarhelmy/CSProject/Game.cpp \
-	/home/omarhelmy/CSProject/Game.h \
-	/home/omarhelmy/CSProject/GameObject.h \
-	/home/omarhelmy/CSProject/GameStateManager.cpp \
-	/home/omarhelmy/CSProject/GameStateManager.h \
-	/home/omarhelmy/CSProject/GameWidget.cpp \
-	/home/omarhelmy/CSProject/GameWidget.h \
-	/home/omarhelmy/CSProject/Hint.cpp \
-	/home/omarhelmy/CSProject/Hint.h \
-	/home/omarhelmy/CSProject/LoginWindow.cpp \
-	/home/omarhelmy/CSProject/LoginWindow.h \
-	/home/omarhelmy/CSProject/MainWindow.cpp \
-	/home/omarhelmy/CSProject/MainWindow.h \
-	/home/omarhelmy/CSProject/Player.cpp \
-	/home/omarhelmy/CSProject/Player.h \
-	/home/omarhelmy/CSProject/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
-	/home/omarhelmy/CSProject/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
-	/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
-	/home/omarhelmy/CSProject/main.cpp \
+	/home/giroum/CSProject/CMakeLists.txt \
+	/home/giroum/CSProject/Game.cpp \
+	/home/giroum/CSProject/Game.h \
+	/home/giroum/CSProject/GameObject.h \
+	/home/giroum/CSProject/GameStateManager.cpp \
+	/home/giroum/CSProject/GameStateManager.h \
+	/home/giroum/CSProject/GameWidget.cpp \
+	/home/giroum/CSProject/GameWidget.h \
+	/home/giroum/CSProject/Hint.cpp \
+	/home/giroum/CSProject/Hint.h \
+	/home/giroum/CSProject/LoginWindow.cpp \
+	/home/giroum/CSProject/LoginWindow.h \
+	/home/giroum/CSProject/MainWindow.cpp \
+	/home/giroum/CSProject/MainWindow.h \
+	/home/giroum/CSProject/Player.cpp \
+	/home/giroum/CSProject/Player.h \
+	/home/giroum/CSProject/Shark.cpp \
+	/home/giroum/CSProject/Shark.h \
+	/home/giroum/CSProject/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
+	/home/giroum/CSProject/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
+	/home/giroum/CSProject/main.cpp \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

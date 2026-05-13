@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omarhelmy/CSProject
+CMAKE_SOURCE_DIR = /home/giroum/CSProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omarhelmy/CSProject/build
+CMAKE_BINARY_DIR = /home/giroum/CSProject/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omarhelmy/CSProject/build/CMakeFiles /home/omarhelmy/CSProject/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giroum/CSProject/build/CMakeFiles /home/giroum/CSProject/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omarhelmy/CSProject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giroum/CSProject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -347,6 +347,30 @@ ScavengerHunt_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.s
 .PHONY : ScavengerHunt_autogen/mocs_compilation.cpp.s
 
+Shark.o: Shark.cpp.o
+.PHONY : Shark.o
+
+# target to build an object file
+Shark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Shark.cpp.o
+.PHONY : Shark.cpp.o
+
+Shark.i: Shark.cpp.i
+.PHONY : Shark.i
+
+# target to preprocess a source file
+Shark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Shark.cpp.i
+.PHONY : Shark.cpp.i
+
+Shark.s: Shark.cpp.s
+.PHONY : Shark.s
+
+# target to generate assembly for a file
+Shark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ScavengerHunt.dir/build.make CMakeFiles/ScavengerHunt.dir/Shark.cpp.s
+.PHONY : Shark.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -406,6 +430,9 @@ help:
 	@echo "... ScavengerHunt_autogen/mocs_compilation.o"
 	@echo "... ScavengerHunt_autogen/mocs_compilation.i"
 	@echo "... ScavengerHunt_autogen/mocs_compilation.s"
+	@echo "... Shark.o"
+	@echo "... Shark.i"
+	@echo "... Shark.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

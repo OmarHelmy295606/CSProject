@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/omarhelmy/CSProject/build/ScavengerHunt_autogen",
-	"CMAKE_BINARY_DIR" : "/home/omarhelmy/CSProject/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/omarhelmy/CSProject/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/omarhelmy/CSProject",
+	"BUILD_DIR" : "/home/giroum/CSProject/build/ScavengerHunt_autogen",
+	"CMAKE_BINARY_DIR" : "/home/giroum/CSProject/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/giroum/CSProject/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/giroum/CSProject",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/omarhelmy/CSProject/CMakeLists.txt",
-		"/home/omarhelmy/CSProject/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/home/giroum/CSProject/CMakeLists.txt",
+		"/home/giroum/CSProject/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
-		"/home/omarhelmy/CSProject/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/giroum/CSProject/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -176,57 +176,63 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/omarhelmy/CSProject",
-	"DEP_FILE" : "/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/giroum/CSProject",
+	"DEP_FILE" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "ScavengerHunt_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/omarhelmy/CSProject/Game.h",
+			"/home/giroum/CSProject/Game.h",
 			"MU",
 			"EWIEGA46WW/moc_Game.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/GameStateManager.h",
+			"/home/giroum/CSProject/GameStateManager.h",
 			"MU",
 			"EWIEGA46WW/moc_GameStateManager.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/GameWidget.h",
+			"/home/giroum/CSProject/GameWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_GameWidget.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/Hint.h",
+			"/home/giroum/CSProject/Hint.h",
 			"MU",
 			"EWIEGA46WW/moc_Hint.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/LoginWindow.h",
+			"/home/giroum/CSProject/LoginWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_LoginWindow.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/MainWindow.h",
+			"/home/giroum/CSProject/MainWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/home/omarhelmy/CSProject/Player.h",
+			"/home/giroum/CSProject/Player.h",
 			"MU",
 			"EWIEGA46WW/moc_Player.cpp",
+			null
+		],
+		[
+			"/home/giroum/CSProject/Shark.h",
+			"MU",
+			"EWIEGA46WW/moc_Shark.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -269,27 +275,28 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "/home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/omarhelmy/CSProject/Game.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/GameStateManager.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/GameWidget.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/Hint.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/LoginWindow.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/MainWindow.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/Player.cpp", "MU", null ],
-		[ "/home/omarhelmy/CSProject/main.cpp", "MU", null ]
+		[ "/home/giroum/CSProject/Game.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/GameStateManager.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/GameWidget.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/Hint.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/LoginWindow.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/MainWindow.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/Player.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/Shark.cpp", "MU", null ],
+		[ "/home/giroum/CSProject/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

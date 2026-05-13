@@ -1,11 +1,12 @@
-/home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/moc_MainWindow.cpp: /home/omarhelmy/CSProject/MainWindow.h \
-  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
-  /home/omarhelmy/CSProject/Game.h \
-  /home/omarhelmy/CSProject/GameObject.h \
-  /home/omarhelmy/CSProject/GameStateManager.h \
-  /home/omarhelmy/CSProject/GameWidget.h \
-  /home/omarhelmy/CSProject/Hint.h \
-  /home/omarhelmy/CSProject/Player.h \
+/home/giroum/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/moc_MainWindow.cpp: /home/giroum/CSProject/MainWindow.h \
+  /home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
+  /home/giroum/CSProject/Game.h \
+  /home/giroum/CSProject/GameObject.h \
+  /home/giroum/CSProject/GameStateManager.h \
+  /home/giroum/CSProject/GameWidget.h \
+  /home/giroum/CSProject/Hint.h \
+  /home/giroum/CSProject/Player.h \
+  /home/giroum/CSProject/Shark.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

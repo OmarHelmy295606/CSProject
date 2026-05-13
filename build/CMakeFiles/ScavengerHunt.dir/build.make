@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omarhelmy/CSProject
+CMAKE_SOURCE_DIR = /home/giroum/CSProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omarhelmy/CSProject/build
+CMAKE_BINARY_DIR = /home/giroum/CSProject/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ScavengerHunt.dir/depend.make
@@ -72,135 +72,149 @@ include CMakeFiles/ScavengerHunt.dir/flags.make
 ScavengerHunt_autogen/timestamp: /usr/lib/qt6/libexec/moc
 ScavengerHunt_autogen/timestamp: /usr/lib/qt6/libexec/uic
 ScavengerHunt_autogen/timestamp: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ScavengerHunt"
-	/usr/bin/cmake -E cmake_autogen /home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ScavengerHunt"
+	/usr/bin/cmake -E cmake_autogen /home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/AutogenInfo.json Release
+	/usr/bin/cmake -E touch /home/giroum/CSProject/build/ScavengerHunt_autogen/timestamp
 
 CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
 CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o: ScavengerHunt_autogen/mocs_compilation.cpp
 CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o -c /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o -MF CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o -c /home/giroum/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp
 
 CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp > CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp > CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp -o CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/build/ScavengerHunt_autogen/mocs_compilation.cpp -o CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/main.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/main.cpp.o: /home/omarhelmy/CSProject/main.cpp
+CMakeFiles/ScavengerHunt.dir/main.cpp.o: /home/giroum/CSProject/main.cpp
 CMakeFiles/ScavengerHunt.dir/main.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ScavengerHunt.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/main.cpp.o -MF CMakeFiles/ScavengerHunt.dir/main.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/main.cpp.o -c /home/omarhelmy/CSProject/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ScavengerHunt.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/main.cpp.o -MF CMakeFiles/ScavengerHunt.dir/main.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/main.cpp.o -c /home/giroum/CSProject/main.cpp
 
 CMakeFiles/ScavengerHunt.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/main.cpp > CMakeFiles/ScavengerHunt.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/main.cpp > CMakeFiles/ScavengerHunt.dir/main.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/main.cpp -o CMakeFiles/ScavengerHunt.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/main.cpp -o CMakeFiles/ScavengerHunt.dir/main.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o: /home/omarhelmy/CSProject/LoginWindow.cpp
+CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o: /home/giroum/CSProject/LoginWindow.cpp
 CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o -MF CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o -c /home/omarhelmy/CSProject/LoginWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o -MF CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o -c /home/giroum/CSProject/LoginWindow.cpp
 
 CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/LoginWindow.cpp > CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/LoginWindow.cpp > CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/LoginWindow.cpp -o CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/LoginWindow.cpp -o CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o: /home/omarhelmy/CSProject/MainWindow.cpp
+CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o: /home/giroum/CSProject/MainWindow.cpp
 CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o -MF CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o -c /home/omarhelmy/CSProject/MainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o -MF CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.o -c /home/giroum/CSProject/MainWindow.cpp
 
 CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/MainWindow.cpp > CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/MainWindow.cpp > CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/MainWindow.cpp -o CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/MainWindow.cpp -o CMakeFiles/ScavengerHunt.dir/MainWindow.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/Player.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/Player.cpp.o: /home/omarhelmy/CSProject/Player.cpp
+CMakeFiles/ScavengerHunt.dir/Player.cpp.o: /home/giroum/CSProject/Player.cpp
 CMakeFiles/ScavengerHunt.dir/Player.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ScavengerHunt.dir/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Player.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Player.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Player.cpp.o -c /home/omarhelmy/CSProject/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ScavengerHunt.dir/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Player.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Player.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Player.cpp.o -c /home/giroum/CSProject/Player.cpp
 
 CMakeFiles/ScavengerHunt.dir/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/Player.cpp > CMakeFiles/ScavengerHunt.dir/Player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/Player.cpp > CMakeFiles/ScavengerHunt.dir/Player.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/Player.cpp -o CMakeFiles/ScavengerHunt.dir/Player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/Player.cpp -o CMakeFiles/ScavengerHunt.dir/Player.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/Hint.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/Hint.cpp.o: /home/omarhelmy/CSProject/Hint.cpp
+CMakeFiles/ScavengerHunt.dir/Hint.cpp.o: /home/giroum/CSProject/Hint.cpp
 CMakeFiles/ScavengerHunt.dir/Hint.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ScavengerHunt.dir/Hint.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Hint.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Hint.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Hint.cpp.o -c /home/omarhelmy/CSProject/Hint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ScavengerHunt.dir/Hint.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Hint.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Hint.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Hint.cpp.o -c /home/giroum/CSProject/Hint.cpp
 
 CMakeFiles/ScavengerHunt.dir/Hint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/Hint.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/Hint.cpp > CMakeFiles/ScavengerHunt.dir/Hint.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/Hint.cpp > CMakeFiles/ScavengerHunt.dir/Hint.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/Hint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/Hint.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/Hint.cpp -o CMakeFiles/ScavengerHunt.dir/Hint.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/Hint.cpp -o CMakeFiles/ScavengerHunt.dir/Hint.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/Game.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/Game.cpp.o: /home/omarhelmy/CSProject/Game.cpp
+CMakeFiles/ScavengerHunt.dir/Game.cpp.o: /home/giroum/CSProject/Game.cpp
 CMakeFiles/ScavengerHunt.dir/Game.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ScavengerHunt.dir/Game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Game.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Game.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Game.cpp.o -c /home/omarhelmy/CSProject/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ScavengerHunt.dir/Game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Game.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Game.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Game.cpp.o -c /home/giroum/CSProject/Game.cpp
 
 CMakeFiles/ScavengerHunt.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/Game.cpp > CMakeFiles/ScavengerHunt.dir/Game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/Game.cpp > CMakeFiles/ScavengerHunt.dir/Game.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/Game.cpp -o CMakeFiles/ScavengerHunt.dir/Game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/Game.cpp -o CMakeFiles/ScavengerHunt.dir/Game.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o: /home/omarhelmy/CSProject/GameWidget.cpp
+CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o: /home/giroum/CSProject/GameWidget.cpp
 CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o -MF CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o -c /home/omarhelmy/CSProject/GameWidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o -MF CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o -c /home/giroum/CSProject/GameWidget.cpp
 
 CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/GameWidget.cpp > CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/GameWidget.cpp > CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/GameWidget.cpp -o CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/GameWidget.cpp -o CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.s
 
 CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
-CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o: /home/omarhelmy/CSProject/GameStateManager.cpp
+CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o: /home/giroum/CSProject/GameStateManager.cpp
 CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o -MF CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o -c /home/omarhelmy/CSProject/GameStateManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o -MF CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o -c /home/giroum/CSProject/GameStateManager.cpp
 
 CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omarhelmy/CSProject/GameStateManager.cpp > CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/GameStateManager.cpp > CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.i
 
 CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omarhelmy/CSProject/GameStateManager.cpp -o CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/GameStateManager.cpp -o CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.s
+
+CMakeFiles/ScavengerHunt.dir/Shark.cpp.o: CMakeFiles/ScavengerHunt.dir/flags.make
+CMakeFiles/ScavengerHunt.dir/Shark.cpp.o: /home/giroum/CSProject/Shark.cpp
+CMakeFiles/ScavengerHunt.dir/Shark.cpp.o: CMakeFiles/ScavengerHunt.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ScavengerHunt.dir/Shark.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ScavengerHunt.dir/Shark.cpp.o -MF CMakeFiles/ScavengerHunt.dir/Shark.cpp.o.d -o CMakeFiles/ScavengerHunt.dir/Shark.cpp.o -c /home/giroum/CSProject/Shark.cpp
+
+CMakeFiles/ScavengerHunt.dir/Shark.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ScavengerHunt.dir/Shark.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giroum/CSProject/Shark.cpp > CMakeFiles/ScavengerHunt.dir/Shark.cpp.i
+
+CMakeFiles/ScavengerHunt.dir/Shark.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ScavengerHunt.dir/Shark.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giroum/CSProject/Shark.cpp -o CMakeFiles/ScavengerHunt.dir/Shark.cpp.s
 
 # Object files for target ScavengerHunt
 ScavengerHunt_OBJECTS = \
@@ -212,7 +226,8 @@ ScavengerHunt_OBJECTS = \
 "CMakeFiles/ScavengerHunt.dir/Hint.cpp.o" \
 "CMakeFiles/ScavengerHunt.dir/Game.cpp.o" \
 "CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o" \
-"CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o"
+"CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o" \
+"CMakeFiles/ScavengerHunt.dir/Shark.cpp.o"
 
 # External object files for target ScavengerHunt
 ScavengerHunt_EXTERNAL_OBJECTS =
@@ -226,6 +241,7 @@ ScavengerHunt: CMakeFiles/ScavengerHunt.dir/Hint.cpp.o
 ScavengerHunt: CMakeFiles/ScavengerHunt.dir/Game.cpp.o
 ScavengerHunt: CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o
 ScavengerHunt: CMakeFiles/ScavengerHunt.dir/GameStateManager.cpp.o
+ScavengerHunt: CMakeFiles/ScavengerHunt.dir/Shark.cpp.o
 ScavengerHunt: CMakeFiles/ScavengerHunt.dir/build.make
 ScavengerHunt: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 ScavengerHunt: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
@@ -233,7 +249,7 @@ ScavengerHunt: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 ScavengerHunt: /usr/lib/x86_64-linux-gnu/libGLX.so
 ScavengerHunt: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 ScavengerHunt: CMakeFiles/ScavengerHunt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/omarhelmy/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ScavengerHunt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/giroum/CSProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ScavengerHunt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ScavengerHunt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -245,6 +261,6 @@ CMakeFiles/ScavengerHunt.dir/clean:
 .PHONY : CMakeFiles/ScavengerHunt.dir/clean
 
 CMakeFiles/ScavengerHunt.dir/depend: ScavengerHunt_autogen/timestamp
-	cd /home/omarhelmy/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omarhelmy/CSProject /home/omarhelmy/CSProject /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build /home/omarhelmy/CSProject/build/CMakeFiles/ScavengerHunt.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/giroum/CSProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giroum/CSProject /home/giroum/CSProject /home/giroum/CSProject/build /home/giroum/CSProject/build /home/giroum/CSProject/build/CMakeFiles/ScavengerHunt.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ScavengerHunt.dir/depend
 
