@@ -174,7 +174,8 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
+		"/home/giroum/CSProject/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/giroum/CSProject",
 	"DEP_FILE" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/deps",
@@ -277,7 +278,7 @@
 	],
 	"MOC_PREDEFS_FILE" : "/home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : [ "/home/giroum/CSProject/build/qrc_resources.cpp" ],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 6,
 	"PARSE_CACHE_FILE" : "/home/giroum/CSProject/build/CMakeFiles/ScavengerHunt_autogen.dir/ParseCache.txt",
@@ -300,7 +301,7 @@
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : [ "/home/giroum/CSProject/build/qrc_resources.cpp" ],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0
 }

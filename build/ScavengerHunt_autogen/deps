@@ -21,6 +21,7 @@ ScavengerHunt_autogen/timestamp: \
 	/home/giroum/CSProject/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/giroum/CSProject/build/ScavengerHunt_autogen/moc_predefs.h \
 	/home/giroum/CSProject/main.cpp \
+	/home/giroum/CSProject/resources.qrc \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

@@ -22,3 +22,4 @@ add_executable(ScavengerHunt
 )
 
 target_link_libraries(ScavengerHunt PRIVATE Qt6::Widgets)
+qt_add_resources(RESOURCES resources.qrc)

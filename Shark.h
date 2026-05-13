@@ -17,6 +17,7 @@ public:
 private:
     QPoint targetPosition;
     int speed;
+    QPixmap texture;
 };
 
 #endif

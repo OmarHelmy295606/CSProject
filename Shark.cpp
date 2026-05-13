@@ -8,6 +8,7 @@ Shark::Shark(QPoint startPos, int size, int speed)
       speed(speed),
       targetPosition(startPos)
 {
+	texture.load(":/assets/shark2.png"); 
 }
 
 void Shark::setTarget(QPoint playerPos) {
@@ -32,10 +33,13 @@ void Shark::update() {
 void Shark::draw(QPainter &painter, QPoint cameraOffset) {
     QPoint screenPos = position - cameraOffset;
 
-    painter.setBrush(Qt::red);
-    painter.setPen(Qt::black);
-
-    painter.drawEllipse(screenPos, size, size);
+    painter.drawPixmap(
+                screenPos.x() - size,
+                screenPos.y() - size,
+                size * 2,
+                size * 2,
+                texture
+        );
 }
 
 bool Shark::collidesWith(QPoint playerPos, int playerSize) {

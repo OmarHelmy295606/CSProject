@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/player.png</file>
+        <file>assets/shark2.png</file>
+    </qresource>
+</RCC>
