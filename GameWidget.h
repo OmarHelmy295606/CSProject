@@ -12,7 +12,7 @@
 class GameWidget : public QWidget {
 	Q_OBJECT
 public:
-	explicit GameWidget(const QString& playerName, int mapWidth = 2400, int mapHeight = 1600, QWidget* parent = nullptr);
+	explicit GameWidget(const QString& playerName, int levelNumber,  QWidget* parent = nullptr);
 	~GameWidget();
 protected:
 	void paintEvent(QPaintEvent *event) override;
@@ -43,7 +43,4 @@ private:
 	Game* game;
 	QTimer* gameTimer;
 	QTimer* secondTimer;
-	int mapWidth;
-	int mapHeight;
-	static constexpr int TORCH_RADIUS = 180;
 };

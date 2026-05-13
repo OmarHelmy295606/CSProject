@@ -1,15 +1,13 @@
 #include "GameWidget.h"
 #include <cmath>
 
-GameWidget::GameWidget(const QString& playerName, int mapWidth, int mapHeight, QWidget* parent) :
-	QWidget(parent),
-	mapWidth(mapWidth),
-	mapHeight(mapHeight)
+GameWidget::GameWidget(const QString& playerName, int levelNumber, QWidget* parent) :
+	QWidget(parent)
 {
 	setFocusPolicy(Qt::StrongFocus);
 	setFixedSize(800, 600);
-	game = new Game(mapWidth, mapHeight, 800, 600);
-	game->start(playerName);
+	game = new Game(800, 600);
+	game->start(playerName, levelNumber);
 
 	gameTimer = new QTimer(this);
 	connect(gameTimer, &QTimer::timeout, this, &GameWidget::onGameTick);
@@ -39,6 +37,18 @@ void GameWidget::keyPressEvent(QKeyEvent *event) {
             		game->reset();
         	return;
     	}
+
+        GameState state = game->getStateManager()->getState();
+
+        if(state == GameState::LEVEL_COMPLETE)
+        {
+                if(event->key() == Qt::Key_Return){
+                	if(game->getCurrentLevel() < 3){
+		        	game->loadLevel(game->getCurrentLevel() + 1);
+			}
+		}
+                return;
+        }
 
 	if (game->hasActiveMessage()) {
 		if (event->key() == Qt::Key_Space || event->key() == Qt::Key_Return) {
@@ -79,7 +89,7 @@ void GameWidget::paintEvent(QPaintEvent *) {
     	if (game->hasActiveMessage())
         	drawMessagePopup(p);
 
-    	if (game->getStateManager()->isOver() || game->getStateManager()->isPaused())
+    	if (game->getStateManager()->isOver() || game->getStateManager()->isPaused() || game->getStateManager()->getState() == GameState::LEVEL_COMPLETE)
         	drawEndOverlay(p);
 }
 
@@ -237,7 +247,7 @@ void GameWidget::drawDarkness(QPainter &p) {
 	QPoint cam = game->getCameraOffset();
 	QPointF screenPos = QPointF(worldPos.x() - cam.x(), worldPos.y() - cam.y());
 
-	QRadialGradient torch(screenPos, TORCH_RADIUS);
+	QRadialGradient torch(screenPos, game->getTorchRadius());
 	torch.setColorAt(0.0, QColor(0, 0, 0, 0));
 	torch.setColorAt(0.55, QColor(0, 0, 0, 60));
 	torch.setColorAt(0.85, QColor(0, 0, 0, 180));
@@ -247,7 +257,7 @@ void GameWidget::drawDarkness(QPainter &p) {
 	p.setPen(Qt::NoPen);
 	p.drawRect(rect());
 
-	QRadialGradient warmth(screenPos, TORCH_RADIUS * 0.3);
+	QRadialGradient warmth(screenPos, game->getTorchRadius()* 0.3);
 	warmth.setColorAt(0.0, QColor(255, 180, 80, 18));
 	warmth.setColorAt(1.0, QColor(255, 180, 80, 0));
 	p.setBrush(warmth);
@@ -299,8 +309,8 @@ void GameWidget::drawMiniMap(QPainter &p) {
 	const int mmX = width() - mmW - 16;
 	const int mmY = 16;
 
-	float scaleX = static_cast<float>(mmW) / mapWidth;
-	float scaleY = static_cast<float>(mmH) / mapHeight;
+	float scaleX = static_cast<float>(mmW) / game->getMapWidth();
+	float scaleY = static_cast<float>(mmH) / game->getMapHeight();
 
 	p.setBrush(QColor(0, 10, 25, 180));
 	p.setPen(QPen(QColor(100, 160, 220, 80), 1));
@@ -373,6 +383,28 @@ void GameWidget::drawEndOverlay(QPainter &p) {
 		p.drawText(QRect(0, height() / 2 + 50, width(), 30), Qt::AlignCenter, "Press ESC to resume");
 		return;
 	}
+
+	if(state == GameState::LEVEL_COMPLETE)
+	{
+    	p.setPen(QColor(80, 200, 160));
+
+    	p.setFont(QFont("Courier New", 30, QFont::Bold));
+
+    	p.drawText(rect(),
+               Qt::AlignCenter,
+               "LEVEL COMPLETE");
+
+    	p.setFont(QFont("Courier New", 12));
+
+    	p.drawText(QRect(0,
+                     height()/2 + 50,
+                     width(),
+                     30),
+               Qt::AlignCenter,
+               "Press ENTER to dive deeper");
+
+    	return;
+}
 
 	if (state == GameState::Win) {
 		p.setPen(QColor(255, 210, 60));

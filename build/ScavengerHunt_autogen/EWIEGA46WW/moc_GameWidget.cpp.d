@@ -4,6 +4,8 @@
   /home/omarhelmy/CSProject/GameObject.h \
   /home/omarhelmy/CSProject/GameStateManager.h \
   /home/omarhelmy/CSProject/Hint.h \
+  /home/omarhelmy/CSProject/LevelConfig.h \
+  /home/omarhelmy/CSProject/LevelData.h \
   /home/omarhelmy/CSProject/Player.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

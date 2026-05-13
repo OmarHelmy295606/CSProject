@@ -322,4 +322,5 @@ CMakeFiles/ScavengerHunt.dir/Game.cpp.o: \
  /home/omarhelmy/CSProject/GameStateManager.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /usr/include/c++/13/ctime
+ /home/omarhelmy/CSProject/LevelConfig.h \
+ /home/omarhelmy/CSProject/LevelData.h /usr/include/c++/13/ctime

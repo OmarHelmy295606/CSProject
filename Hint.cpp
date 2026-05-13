@@ -4,17 +4,13 @@
 #include <QFont>
 #include <cmath>
 
-Hint::Hint(int sequenceIndex,
-           const QString &message,
-           QPoint position,
-           int size,
-           int pointValue)
-    : GameObject(position, size),
+Hint::Hint(QPoint position ,int sequenceIndex, const QString &message, bool treasure)
+    : GameObject(position, 18),
       sequenceIndex(sequenceIndex),
       message(message),
       active(false),
       collected(false),
-      pointValue(pointValue),
+      Treasure(treasure),
       pulsePhase(0.0f)
 {}
 
@@ -33,7 +29,9 @@ bool Hint::isCollected() const {
 QString Hint::getMessage() const {
     return message;
 }
-
+bool Hint::isTreasure() const{
+	return Treasure;
+}
 
 void Hint::activate() {
     if (!collected) {

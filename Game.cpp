@@ -3,21 +3,19 @@
 #include <ctime>
 #include <cmath>
 
-Game::Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight) :
-	mapWidth(mapWidth),
-	mapHeight(mapHeight),
+Game::Game(int screenWidth, int screenHeight) :
 	screenWidth(screenWidth),
 	screenHeight(screenHeight),
+	currentLevel(1),
 	currentHintIndex(0),
 	cameraOffset(0, 0),
 	activeMessage(""),
 	messageActive(false),
-	oxygenDrainRate(2.0f),
 	collectionRadius(40)
 {
 	stateManager = new GameStateManager();
-	player = new Player("PlaceHolder Player", QPoint(mapWidth / 2, mapHeight / 2));
-	player->setMapBounds(mapWidth, mapHeight);
+	player = nullptr;
+
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
@@ -29,44 +27,49 @@ Game::~Game(){
 }
 
 
-void Game::start(const QString& playerName){
-	player->setName(playerName);
-	reset();
-}
+void Game::loadLevel(int levelNumber){
+	currentLevel = levelNumber;
+	activeConfig = getLevel(levelNumber);
+	mapWidth = activeConfig.mapWidth;
+	mapHeight = activeConfig.mapHeight;
+	oxygenDrainRate = activeConfig.oxygenDrainRate;
 
-void Game::reset(){
-	player->setPosition(QPoint(mapWidth / 2, mapHeight / 2));
-	player->resetOxygen();
+	delete player;
+	player = new Player("placeholder", activeConfig.playerStartPos);
+	player->setMapBounds(mapWidth, mapHeight);
+	if(!playerName.isEmpty())
+		player->setName(playerName);
 
 	qDeleteAll(hints);
 	hints.clear();
 	spawnHints();
 
 	currentHintIndex = 0;
-	activeMessage = "";
-	messageActive = false;
-
-	cameraOffset = QPoint(0, 0);
+	activeMessage    = "";
+	messageActive    = false;
+	cameraOffset     = QPoint(0, 0);
 	updateCamera();
 	stateManager->setState(GameState::Playing);
+
+	player->resetOxygen();
+}
+
+
+void Game::start(const QString& name, int levelNum){
+	playerName = name;
+	loadLevel(levelNum);
+}
+
+void Game::reset(){
+	loadLevel(currentLevel);
 }
 
 
 void Game::spawnHints(){
-	struct HintData {
-		QPoint  pos;
-        	QString message;
-    	};
 
-	QList<HintData> hintData = {
-		{ QPoint(300,  400),  "The sea holds secrets... follow the broken anchor." },
-        	{ QPoint(800,  700),  "Near the sunken mast, something gleams..." },
-        	{ QPoint(1400, 500),  "The old hull hides a clue beneath its shadow." },
-      		{ QPoint(1900, 900),  "Dive deeper — the treasure chest awaits." }
-	};
-
-	for(int i =0; i< hintData.size(); i++){
-		Hint* h = new Hint(i, hintData[i].message, hintData[i].pos);
+	for(int i =0; i< activeConfig.hints.size(); i++){
+		const HintData &hd = activeConfig.hints[i];
+		Hint* h = new Hint(hd.position, i, hd.message, hd.isTreasure);
 		if(i==0)
 			h->activate();
 		hints.append(h);
@@ -76,16 +79,15 @@ void Game::spawnHints(){
 
 void Game::update(){
 	if(!stateManager->isPlaying()) return;
-
+	if(!player) return;
 	player->update();
 	updateCamera();
 	for(Hint* h : hints)
 		h->update();
 	checkCollisions();
 
-	if(checkWinCondition())
-		stateManager->setState(GameState::Win);
-	else if(checkLoseCondition())
+	checkWinCondition();
+	if(checkLoseCondition())
 		stateManager->setState(GameState::Lose);
 }
 
@@ -146,6 +148,13 @@ void Game::dismissMessage(){
 bool Game::checkWinCondition(){
 	for(Hint* h :hints)
 		if(!h->isCollected()) return false;
+
+	if(currentLevel<3)
+		stateManager->setState(GameState::LEVEL_COMPLETE);
+	else
+		stateManager->setState(GameState::Win);
+
+
 	return true;
 }
 
@@ -166,4 +175,25 @@ Player* Game::getPlayer() const {return player;}
 QList<Hint*> Game::getHints() const {return hints;}
 GameStateManager* Game::getStateManager() const {return stateManager;}
 int Game::getCurrentHintIndex() const {return currentHintIndex;}
+int Game::getCurrentLevel() const {
+    return currentLevel;
+}
 
+int Game::getMapWidth() const {
+    return mapWidth;
+}
+
+int Game::getMapHeight() const {
+    return mapHeight;
+}
+
+QString Game::getLevelName() const {
+    return activeConfig.levelName;
+}
+
+QString Game::getIntroText() const {
+    return activeConfig.introText;
+}
+int Game::getTorchRadius() const{
+	return activeConfig.torchRadius;
+}

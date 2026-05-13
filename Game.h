@@ -6,13 +6,16 @@
 #include <QList>
 #include <QString>
 #include <QPoint>
+#include "LevelConfig.h"
+#include "LevelData.h"
+
 
 class Game {
 public:
-    	Game(int mapWidth, int mapHeight, int screenWidth, int screenHeight);
+    	Game(int screenWidth, int screenHeight);
     	~Game();
 
-    	void start(const QString &playerName);
+    	void start(const QString &name, int levelNum);
     	void reset();
     	void update();
     	void tickOxygen();
@@ -29,6 +32,14 @@ public:
     	GameStateManager *getStateManager() const;
     	int           getCurrentHintIndex() const;
 
+	void loadLevel(int levelNumber);
+	int getCurrentLevel() const;
+	int getMapWidth() const;
+	int getMapHeight() const;
+	QString getLevelName() const;
+	QString getIntroText() const;
+	int getTorchRadius() const;
+
 private:
     	void spawnHints();
     	void updateCamera();
@@ -42,6 +53,8 @@ private:
     	QList<Hint *>     hints;
     	GameStateManager *stateManager;
 
+	QString playerName;
+
     	int mapWidth;
     	int mapHeight;
     	int screenWidth;
@@ -53,4 +66,7 @@ private:
     	bool    messageActive;
 	float oxygenDrainRate;
 	int collectionRadius;
+
+	int currentLevel;
+	LevelConfig activeConfig;
 };

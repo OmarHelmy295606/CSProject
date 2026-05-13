@@ -6,7 +6,7 @@ enum class GameState{
 	Paused,
 	Win,
 	Lose,
-	Level_Complete
+	LEVEL_COMPLETE
 };
 
 class GameStateManager{

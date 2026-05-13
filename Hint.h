@@ -6,11 +6,7 @@
 
 class Hint : public GameObject {
 public:
-    Hint(int sequenceIndex,
-         const QString &message,
-         QPoint position,
-         int size       = 15,
-         int pointValue = 10);
+    Hint(QPoint position ,int sequenceIndex, const QString &message, bool isTreasure = false);
 
     int  getSequenceIndex() const;
     bool isActive()         const;
@@ -22,14 +18,14 @@ public:
 
     void update() override;   // pulse animation, only when active
     void draw(QPainter &painter, QPoint cameraOffset) override; // only draws when active
-
+    bool isTreasure() const;
 private:
     int     sequenceIndex;
     QString message;
     bool    active;
     bool    collected;
     int     pointValue;
-
+    bool Treasure;
     float pulsePhase;
     static constexpr float PULSE_SPEED = 0.08f;
 };

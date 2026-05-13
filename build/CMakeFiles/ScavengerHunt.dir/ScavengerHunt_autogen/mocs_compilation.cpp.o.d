@@ -393,6 +393,8 @@ CMakeFiles/ScavengerHunt.dir/ScavengerHunt_autogen/mocs_compilation.cpp.o: \
  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/../../../Hint.h \
  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/../../../GameStateManager.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/../../../LevelConfig.h \
+ /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/../../../LevelData.h \
  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/moc_LoginWindow.cpp \
  /home/omarhelmy/CSProject/build/ScavengerHunt_autogen/EWIEGA46WW/../../../LoginWindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \

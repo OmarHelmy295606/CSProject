@@ -385,4 +385,6 @@ CMakeFiles/ScavengerHunt.dir/GameWidget.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
  /home/omarhelmy/CSProject/Hint.h \
  /home/omarhelmy/CSProject/GameStateManager.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /home/omarhelmy/CSProject/LevelConfig.h \
+ /home/omarhelmy/CSProject/LevelData.h

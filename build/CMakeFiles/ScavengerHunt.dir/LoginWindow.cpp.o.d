@@ -404,6 +404,8 @@ CMakeFiles/ScavengerHunt.dir/LoginWindow.cpp.o: \
  /home/omarhelmy/CSProject/Hint.h \
  /home/omarhelmy/CSProject/GameStateManager.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /home/omarhelmy/CSProject/LevelConfig.h \
+ /home/omarhelmy/CSProject/LevelData.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \

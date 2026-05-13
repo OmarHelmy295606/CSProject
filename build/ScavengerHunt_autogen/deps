@@ -9,6 +9,8 @@ ScavengerHunt_autogen/timestamp: \
 	/home/omarhelmy/CSProject/GameWidget.h \
 	/home/omarhelmy/CSProject/Hint.cpp \
 	/home/omarhelmy/CSProject/Hint.h \
+	/home/omarhelmy/CSProject/LevelConfig.h \
+	/home/omarhelmy/CSProject/LevelData.h \
 	/home/omarhelmy/CSProject/LoginWindow.cpp \
 	/home/omarhelmy/CSProject/LoginWindow.h \
 	/home/omarhelmy/CSProject/MainWindow.cpp \

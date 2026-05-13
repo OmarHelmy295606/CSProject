@@ -32,7 +32,7 @@ MainWindow::MainWindow(const QString &username, QWidget *parent)
 }
 
 void MainWindow::onStartGame(){
-	gameWidget = new GameWidget(playerName, 2400, 1600, this);
+	gameWidget = new GameWidget(playerName, 1, this);
 	setCentralWidget(gameWidget);
 	gameWidget->setFocus();
 }
